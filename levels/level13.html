@@ -15,16 +15,28 @@
                 robotArm.grab();
                let color = robotArm.scan();
                 if (color == "red"){
-                    
+                    robotArm.moveRight();
+                    robotArm.drop();
+                    robotArm.moveLeft();
                 }
                 else if (color == "blue"){
-
+                    robotArm.moveRight();
+                    robotArm.drop();
+                    robotArm.moveLeft();
                 }
                 else if (color == "green"){
-
+                    robotArm.moveRight();
+                    robotArm.drop();
+                    robotArm.moveLeft();
                 }
                 else if (color == "white"){
-
+                    for (let i = 0; i < 4; i++) {
+                        robotArm.moveRight();  
+                    }
+                    robotArm.drop();
+                    for (let i = 0; i < 4; i++) {
+                        robotArm.moveLeft();  
+                    }
                 }
             }
             
