@@ -20,14 +20,22 @@
                     robotArm.moveLeft();
                 }
                 else if (color == "blue"){
-                    robotArm.moveRight();
+                    for (let i = 0; i < 2; i++) {
+                        robotArm.moveRight();  
+                    }
                     robotArm.drop();
-                    robotArm.moveLeft();
+                    for (let i = 0; i < 2; i++) {
+                        robotArm.moveLeft();
+                    }
                 }
                 else if (color == "green"){
-                    robotArm.moveRight();
+                    for (let i = 0; i < 3; i++) {
+                        robotArm.moveRight();  
+                    }
                     robotArm.drop();
-                    robotArm.moveLeft();
+                    for (let i = 0; i < 3; i++) {
+                        robotArm.moveLeft();
+                    }
                 }
                 else if (color == "white"){
                     for (let i = 0; i < 4; i++) {

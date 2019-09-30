@@ -11,14 +11,10 @@
             robotArm.loadLevel("exercise 12");
             
             // Jou instructies volgen hier
-            let amount = 9
+            let amount;
             for (let x = 0; x < 9; x++) {
                 robotArm.grab();
-                if (x == 0){
-                    amount = 9
-                }else{
-                    amount = 9
-                }
+                amount = 9
                 let kleur = robotArm.scan();
                 if(kleur == "red"){
                     let temp = amount - x
