@@ -11,26 +11,19 @@
             robotArm.loadLevel("exercise 10");
             
             // Jou instructies volgen hier
-            let amount = 1;
-            let moveAmountRight = 9;     
-            let moveAmountLeft = 8;
-            let minusAmount = 2;
+            let amount1 = 9
+            let amount2 = 8
             for (let i = 0; i < 5; i++) {
-                for (let i = 0; i < amount; i++) {
-                    robotArm.grab()
-                    for (let i = 0; i < moveAmountRight; i++) {
-                        robotArm.moveRight();
-                    }
-                    moveAmountRight-=minusAmount;
-                    robotArm.drop();
-                    for (let i = 0; i < moveAmountLeft; i++) {
-                        robotArm.moveLeft()       
-                    }           
-                    moveAmountLeft--;
-                    if(moveAmountRight < 5){
-                        minusAmount = 2;
-                    }
+                robotArm.grab();
+                for (let i = 0; i < amount1; i++) {
+                    robotArm.moveRight();     
+                }  
+                robotArm.drop();
+                for (let i = 0; i < amount2; i++) {
+                    robotArm.moveLeft();
                 }
+                amount1-=2
+                amount2-=2   
             }
             
             // De door jou opgegeven instructies uitvoeren
