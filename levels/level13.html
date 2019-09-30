@@ -11,7 +11,22 @@
             robotArm.randomLevel( 1, 8);
             
             // Jou instructies volgen hier
-            
+            for (let i = 0; i < 8; i++) {
+                robotArm.grab();
+               let color = robotArm.scan();
+                if (color == "red"){
+                    
+                }
+                else if (color == "blue"){
+
+                }
+                else if (color == "green"){
+
+                }
+                else if (color == "white"){
+
+                }
+            }
             
             // De door jou opgegeven instructies uitvoeren
             robotArm.run();
