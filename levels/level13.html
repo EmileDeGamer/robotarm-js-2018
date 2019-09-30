@@ -18,9 +18,22 @@
             robotArm.randomLevel( 1, 8);
             
             // Jou instructies volgen hier
+            let amount = 1;
             for (let i = 0; i < 8; i++) {
                 robotArm.grab();
-               let color = robotArm.scan();
+                let block = robotArm.scan();
+                if(block == null){
+                    break;
+                }
+                for (let i = 0; i < amount; i++) {
+                    robotArm.moveRight();
+                }
+                robotArm.drop();
+                for (let i = 0; i < amount; i++) {
+                    robotArm.moveLeft();   
+                }
+                amount++
+                /*let color = robotArm.scan();
                 if (color == "red"){
                     robotArm.moveRight();
                     robotArm.drop();
@@ -52,7 +65,7 @@
                     for (let i = 0; i < 4; i++) {
                         robotArm.moveLeft();  
                     }
-                }
+                }*/
             }
             
             // De door jou opgegeven instructies uitvoeren
