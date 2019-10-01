@@ -47,3 +47,12 @@ function dropLeft(amount){
     moveLeft(amount)
     drop()
 }
+
+function move(side, amount){
+    if (side == "l"){
+        moveLeft(amount);
+    }
+    else if (side == "r"){
+        moveRight(amount);
+    }
+}
