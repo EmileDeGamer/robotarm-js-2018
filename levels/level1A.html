@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div>
+            <a href="./level2.html" class="button">Volgend level</a>
+        </div>
+        <h1>Level 1</h1>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="../robot-arm.js"></script>
+        <script src="../advanced.js"></script>
+        <script>
+            // Robotarm bibliotheek inladen
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            
+            // Het level inladen
+            robotArm.loadLevel("exercise 1");
+            
+            // Jou instructies volgen hier
+            moveRight(1)
+            grab()
+            moveLeft(1)
+            drop()
+            
+            // De door jou opgegeven instructies uitvoeren
+            robotArm.run()
+        </script>
+    </body>
+</html>
