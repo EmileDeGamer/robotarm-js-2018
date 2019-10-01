@@ -1,10 +1,16 @@
 function moveRight(amount){
+    if (amount == null){
+        amount = 1
+    }
     for (let i = 0; i < amount; i++) {
         robotArm.moveRight()
     }
 }
 
 function moveLeft(amount){
+    if (amount == null){
+        amount = 1
+    }
     for (let i = 0; i < amount; i++) {
         robotArm.moveLeft()  
     }
@@ -24,10 +30,20 @@ function drop(){
     robotArm.drop()
 }
 
-function dropRight(){
-
+function dropRight(amount){
+    if (amount == null){
+        amount = 1
+    }
+    grab()
+    moveRight(amount)
+    drop()
 }
 
-function dropLeft(){
-    
+function dropLeft(amount){
+    if (amount == null){
+        amount = 1
+    }
+    grab()
+    moveLeft(amount)
+    drop()
 }

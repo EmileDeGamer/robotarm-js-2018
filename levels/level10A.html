@@ -4,9 +4,10 @@
     </head>
     <body>
         <div>
-            <a href="./level2A.html" class="button">Volgend level</a>
+                <a href="./level11A.html" class="button">Volgend level</a>
+                <a href="./level9A.html" class="button">Vorig level</a>
         </div>
-        <h1>Level 1</h1>
+        <h1>Level 10</h1>
         <canvas id="canvas" width="800" height="600"></canvas>
         <script src="../robot-arm.js"></script>
         <script src="../advanced.js"></script>
@@ -16,11 +17,17 @@
             var robotArm = new RobotArm(canvas);
             
             // Het level inladen
-            robotArm.loadLevel("exercise 1");
+            robotArm.loadLevel("exercise 10");
             
             // Jou instructies volgen hier
-            moveRight(1)
-            dropLeft()
+            let amount1 = 9
+            let amount2 = 8
+            for (let i = 0; i < 5; i++) {
+                dropRight(amount1)
+                moveLeft(amount2)
+                amount1-=2
+                amount2-=2   
+            }
             
             // De door jou opgegeven instructies uitvoeren
             robotArm.run()

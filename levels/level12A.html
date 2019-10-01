@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div>
+                <a href="./level13A.html" class="button">Volgend level</a>
+                <a href="./level11A.html" class="button">Vorig level</a>
+        </div>
+        <h1>Level 12</h1>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <script src="../robot-arm.js"></script>
+        <script src="../advanced.js"></script>
+        <script>
+            // Robotarm bibliotheek inladen
+            var canvas = document.getElementById("canvas");
+            var robotArm = new RobotArm(canvas);
+            
+            // Het level inladen
+            robotArm.loadLevel("exercise 12");
+            
+            // Jou instructies volgen hier
+            let amount;
+            for (let x = 0; x < 9; x++) {
+                amount = 9
+                let kleur = scan()
+                if(kleur == "red"){
+                    let temp = amount - x
+                    moveRight(temp)
+                    drop()
+                    moveLeft(temp)
+                    moveRight()
+                    amount++
+                }
+                else{
+                    drop()
+                    moveRight()
+                }  
+            }
+            
+            // De door jou opgegeven instructies uitvoeren
+            robotArm.run()
+        </script>
+    </body>
+</html>

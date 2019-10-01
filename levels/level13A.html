@@ -4,9 +4,9 @@
     </head>
     <body>
         <div>
-            <a href="./level2A.html" class="button">Volgend level</a>
+                <a href="./level12A.html" class="button">Vorig level</a>
         </div>
-        <h1>Level 1</h1>
+        <h1>Level 13</h1>
         <canvas id="canvas" width="800" height="600"></canvas>
         <script src="../robot-arm.js"></script>
         <script src="../advanced.js"></script>
@@ -16,12 +16,21 @@
             var robotArm = new RobotArm(canvas);
             
             // Het level inladen
-            robotArm.loadLevel("exercise 1");
+            robotArm.randomLevel( 1, 8);
             
             // Jou instructies volgen hier
-            moveRight(1)
-            dropLeft()
-            
+            let amount = 1;
+            for (let i = 0; i < 8; i++) {
+                let block = scan()
+                if(block == null){
+                    break;
+                }
+                moveRight(amount)
+                drop()
+                moveLeft(amount)
+                amount++
+            }
+
             // De door jou opgegeven instructies uitvoeren
             robotArm.run()
         </script>

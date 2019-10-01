@@ -4,7 +4,8 @@
     </head>
     <body>
         <div>
-            <a href="./level2.html" class="button">Volgend level</a>
+                <a href="./level3A.html" class="button">Volgend level</a>
+                <a href="./level1A.html" class="button">Vorig level</a>
         </div>
         <h1>Level 2</h1>
         <canvas id="canvas" width="800" height="600"></canvas>
@@ -19,17 +20,11 @@
             robotArm.loadLevel("exercise 2");
             
             // Jou instructies volgen hier
-            grab()
-            moveRight(9)
-            drop()
+            dropRight(9)
             moveLeft(5)
-            grab()
-            moveRight(5)
-            drop()
+            dropRight(5)
             moveLeft(2)
-            grab()
-            moveRight(2)
-            drop()
+            dropRight(2)
             
             // De door jou opgegeven instructies uitvoeren
             robotArm.run()
